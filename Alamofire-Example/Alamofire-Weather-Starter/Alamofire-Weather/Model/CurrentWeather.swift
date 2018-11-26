@@ -12,7 +12,7 @@ import Foundation
 
 class CurrentWeather
 {
-    let temperature: Int?
+    let temperature: Double?
     let humidity: Int?
     let precipProbability: Int?
     let summary: String?
@@ -28,7 +28,7 @@ class CurrentWeather
     
     init(weatherDictionary: [String : Any])
     {
-        self.temperature = weatherDictionary[WeatherKeys.temperature] as? Int
+        self.temperature = weatherDictionary[WeatherKeys.temperature] as? Double
         
         if let humidityDouble = weatherDictionary[WeatherKeys.humidity] as? Double {
             humidity = Int(humidityDouble * 100)
