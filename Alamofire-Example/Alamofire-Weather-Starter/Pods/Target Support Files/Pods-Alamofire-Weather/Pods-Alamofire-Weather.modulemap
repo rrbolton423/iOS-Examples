@@ -1,0 +1,6 @@
+framework module Pods_Alamofire_Weather {
+  umbrella header "Pods-Alamofire-Weather-umbrella.h"
+
+  export *
+  module * { export * }
+}

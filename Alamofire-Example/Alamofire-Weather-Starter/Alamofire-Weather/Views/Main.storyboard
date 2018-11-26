@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="476-NY-lRI">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Current Weather View Controller-->
+        <scene sceneID="3jc-K4-22D">
+            <objects>
+                <viewController id="476-NY-lRI" customClass="CurrentWeatherViewController" customModule="Alamofire_Weather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gNW-93-fGC"/>
+                        <viewControllerLayoutGuide type="bottom" id="utB-Na-0KF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HZZ-YP-9ml">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg" translatesAutoresizingMaskIntoConstraints="NO" id="IZf-61-DtG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="huh-z0-LO5">
+                                <rect key="frame" x="171.5" y="28" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="6Gq-Yi-AIA"/>
+                                    <constraint firstAttribute="height" constant="32" id="w9K-IJ-Znk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chicago" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-Lu-PVo">
+                                <rect key="frame" x="16" y="180" width="343" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63h-sa-KTj">
+                                <rect key="frame" x="16" y="222" width="343" height="96"/>
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAHRENHEIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJn-nx-LQH">
+                                <rect key="frame" x="139.5" y="326" width="96" height="19.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="utB-Na-0KF" firstAttribute="top" secondItem="IZf-61-DtG" secondAttribute="bottom" id="1eE-1m-og6"/>
+                            <constraint firstItem="63h-sa-KTj" firstAttribute="leading" secondItem="HZZ-YP-9ml" secondAttribute="leadingMargin" id="Bva-3R-5J8"/>
+                            <constraint firstItem="huh-z0-LO5" firstAttribute="centerX" secondItem="IZf-61-DtG" secondAttribute="centerX" id="DRo-kX-XAo"/>
+                            <constraint firstItem="fJn-nx-LQH" firstAttribute="top" secondItem="63h-sa-KTj" secondAttribute="bottom" constant="8" symbolic="YES" id="E6p-va-Srz"/>
+                            <constraint firstItem="IZf-61-DtG" firstAttribute="top" secondItem="HZZ-YP-9ml" secondAttribute="top" id="MNp-Sr-mnT"/>
+                            <constraint firstItem="63h-sa-KTj" firstAttribute="top" secondItem="JQG-Lu-PVo" secondAttribute="bottom" constant="21" id="NsX-Pc-6Tg"/>
+                            <constraint firstItem="63h-sa-KTj" firstAttribute="top" secondItem="HZZ-YP-9ml" secondAttribute="top" constant="222" id="UWK-ol-N42"/>
+                            <constraint firstItem="huh-z0-LO5" firstAttribute="centerX" secondItem="63h-sa-KTj" secondAttribute="centerX" id="dyy-1E-MTn"/>
+                            <constraint firstItem="huh-z0-LO5" firstAttribute="centerX" secondItem="JQG-Lu-PVo" secondAttribute="centerX" id="eeZ-gp-sS1"/>
+                            <constraint firstItem="63h-sa-KTj" firstAttribute="leading" secondItem="JQG-Lu-PVo" secondAttribute="leading" id="g3g-OL-wpO"/>
+                            <constraint firstAttribute="trailing" secondItem="IZf-61-DtG" secondAttribute="trailing" id="jpF-Bd-KFh"/>
+                            <constraint firstItem="huh-z0-LO5" firstAttribute="centerX" secondItem="fJn-nx-LQH" secondAttribute="centerX" id="rug-I8-ClU"/>
+                            <constraint firstItem="huh-z0-LO5" firstAttribute="top" secondItem="gNW-93-fGC" secondAttribute="bottom" constant="8" id="uUe-yL-KR5"/>
+                            <constraint firstItem="IZf-61-DtG" firstAttribute="leading" secondItem="HZZ-YP-9ml" secondAttribute="leading" id="uay-F6-tat"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="IZf-61-DtG" id="fSO-W2-bse"/>
+                        <outlet property="cityTextLabel" destination="JQG-Lu-PVo" id="6tW-NP-Tic"/>
+                        <outlet property="temperatureLabel" destination="63h-sa-KTj" id="fcP-t2-3hQ"/>
+                        <outlet property="temperatureScaleLabel" destination="fJn-nx-LQH" id="2Y9-mB-chV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0d-5b-5CR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-298.39999999999998" y="46.326836581709152"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bg" width="1600" height="1067"/>
+        <image name="logo" width="210" height="237"/>
+    </resources>
+</document>
