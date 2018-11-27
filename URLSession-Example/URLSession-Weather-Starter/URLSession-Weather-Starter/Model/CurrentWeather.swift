@@ -29,7 +29,7 @@ class CurrentWeather
     //  Parse the weatherDictionary into a Current Weather object, setting it's stored properties using the WeatherKeys to access the values from the json
     init(weatherDictionary: [String : Any])
     {
-        var temp = weatherDictionary[WeatherKeys.temperature] as? Double
+        let temp = weatherDictionary[WeatherKeys.temperature] as? Double
         self.temperature = Int(temp!)
         
         if let humidityDouble = weatherDictionary[WeatherKeys.humidity] as? Double {

@@ -43,7 +43,7 @@ class CurrentWeatherViewController: UIViewController {
                     if let temperature = currentWeather.temperature {
                         
                         // Display temperature in the VC's label
-                        self.temperatureLabel.text = "\(temperature)"
+                        self.temperatureLabel.text = "\(temperature)°"
                         
                     } else { // If temperature is nil...
 
