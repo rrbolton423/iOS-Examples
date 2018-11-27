@@ -11,7 +11,7 @@ import Foundation
 class CurrentWeather
 {
     // Define properties for CurrentWeather object
-    let temperature: Double?
+    let temperature: Int?
     let humidity: Int?
     let precipProbability: Int?
     let summary: String?
@@ -29,7 +29,8 @@ class CurrentWeather
     //  Parse the weatherDictionary into a Current Weather object, setting it's stored properties using the WeatherKeys to access the values from the json
     init(weatherDictionary: [String : Any])
     {
-        self.temperature = weatherDictionary[WeatherKeys.temperature] as? Double
+        var temp = weatherDictionary[WeatherKeys.temperature] as? Double
+        self.temperature = Int(temp!)
         
         if let humidityDouble = weatherDictionary[WeatherKeys.humidity] as? Double {
             humidity = Int(humidityDouble * 100)

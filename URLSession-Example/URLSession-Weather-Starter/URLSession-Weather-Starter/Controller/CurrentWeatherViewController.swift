@@ -16,7 +16,7 @@ class CurrentWeatherViewController: UIViewController {
     @IBOutlet weak var temperatureLabel: UILabel!
     @IBOutlet weak var temperatureScaleLabel: UILabel!
     
-    // Testing Data
+    // Testing Data; API Key and Coordinates for Chicago, IL
     let forecastAPIKey = "33c371344898311931ea3058dcc4730f"
     let coordinate: (lat: Double, long: Double) = (41.8781, 87.6298)
     
@@ -29,16 +29,25 @@ class CurrentWeatherViewController: UIViewController {
         // Get the forecast using the ForecastService
         forecastService.getForecast(latitude: coordinate.lat, longitude: coordinate.long) { (currentWeather) in
             
-            // Unwrap the currentWeather object
             // OFF THE MAIN QUEUE!!!!
+            
+            // Unwrap the currentWeather object
             if let currentWeather = currentWeather {
+                
                 // Display data on the main thread
                 DispatchQueue.main.async {
                     
                     // RULE: ALL UI CODE MUST HAPPEN ON THE MAIN QUEUE
-                    if let temperature = currentWeather.humidity {
+                    
+                    // If temperature is not nil...
+                    if let temperature = currentWeather.temperature {
+                        
+                        // Display temperature in the VC's label
                         self.temperatureLabel.text = "\(temperature)"
-                    } else {
+                        
+                    } else { // If temperature is nil...
+
+                        // Display a placeholder in the VC's label
                         self.temperatureLabel.text = "-"
                     }
                 }

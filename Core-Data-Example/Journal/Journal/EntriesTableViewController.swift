@@ -21,6 +21,7 @@ class EntriesTableViewController: UITableViewController
     {
         super.viewDidLoad()
         
+        // Set the title of the VC to "Journal"
         self.title = "Journal"
         
         // Get a reference to the AppDelegate

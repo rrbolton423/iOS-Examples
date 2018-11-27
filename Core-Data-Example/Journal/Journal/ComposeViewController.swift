@@ -12,17 +12,24 @@ import CoreData // Import CoreData
 class ComposeViewController: UIViewController
 {
     
+    // Declare the ManagedObjectContext, and NSManagedObject
     var managedObjectContext: NSManagedObjectContext!
     var entry: NSManagedObject!
     
+    // Declare the VC's views
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var doneBarButtonItem: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set the title of the VC to "Compose"
         self.title = "Compose"
+        
+        // Make the TextView have focus
         self.textView.becomeFirstResponder()
+        
+        // Set the doneBarButtonItem
         self.navigationItem.rightBarButtonItem = self.doneBarButtonItem
         
         // Get a reference to the AppDelegate
