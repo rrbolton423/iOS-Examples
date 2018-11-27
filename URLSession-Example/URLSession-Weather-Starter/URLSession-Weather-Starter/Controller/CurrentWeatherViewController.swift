@@ -23,10 +23,10 @@ class CurrentWeatherViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create an instance of the ForecastService
+        // Initialize the ForecastService object with the API Key
         let forecastService = ForecastService(APIKey: forecastAPIKey)
         
-        // Get the forecast using the ForecastService
+        // Get the forecast using the ForecastService, also passing a latitude and longitude of a location. This method returns a currentWeather object in a closure
         forecastService.getForecast(latitude: coordinate.lat, longitude: coordinate.long) { (currentWeather) in
             
             // OFF THE MAIN QUEUE!!!!
