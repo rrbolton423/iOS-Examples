@@ -50,14 +50,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A384E0A521B2E5B0002BABED /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Controller;
-			path = "New Group/Controller";
-			sourceTree = "<group>";
-		};
 		A3FC9D6621B1D6D800D45B49 = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +71,6 @@
 		A3FC9D7121B1D6D800D45B49 /* Realm-Example */ = {
 			isa = PBXGroup;
 			children = (
-				A384E0A521B2E5B0002BABED /* Controller */,
 				A3FC9D7221B1D6D800D45B49 /* AppDelegate.swift */,
 				A3FC9D7421B1D6D800D45B49 /* ViewController.swift */,
 				A384E0A221B24B33002BABED /* InsertViewController.swift */,

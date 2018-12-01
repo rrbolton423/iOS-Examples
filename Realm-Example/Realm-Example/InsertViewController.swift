@@ -81,11 +81,4 @@ class InsertViewController: UIViewController {
         // Navigate to the previous View Controller
         navigationController?.popViewController(animated: true)
     }
-    
-    // Before the VC dissapears...
-    override func viewWillDisappear(_ animated: Bool) {
-        
-        // Save the data
-        self.saveButtonAction("Any")
-    }
 }
