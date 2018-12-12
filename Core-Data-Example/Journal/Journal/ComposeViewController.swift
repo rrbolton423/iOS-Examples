@@ -14,7 +14,7 @@ class ComposeViewController: UIViewController
     
     // Declare the ManagedObjectContext, and NSManagedObject
     var managedObjectContext: NSManagedObjectContext!
-    var entry: NSManagedObject!
+    var entry: NSManagedObject?
     
     // Declare the VC's views
     @IBOutlet weak var textView: UITextView!
@@ -38,7 +38,7 @@ class ComposeViewController: UIViewController
         // Get a reference to the Managed Object Context
         managedObjectContext = appDelegate.persistentContainer.viewContext
         
-        if entry != nil { // If there is an existing entry passed into this class...
+        if let entry = entry { // If there is an existing entry passed into this class...
             
             // Set the TextField to the existing Entry
             self.textView.text = entry.value(forKey: "bodyText") as? String
@@ -55,7 +55,7 @@ class ComposeViewController: UIViewController
     @IBAction func doneDidClick()
     {
         // If there is an existing Entry when the 'done' button is clicked...
-        if entry != nil {
+        if let entry = entry {
             
             // Update that Entry in CoreData
             self.updateEntry()
@@ -106,6 +106,9 @@ class ComposeViewController: UIViewController
     // back to CoreData
     func updateEntry()
     {
+        // Nil check the existing entry
+        guard let entry = entry else { return }
+        
         // If this method is called, the Entry is not nil, so we just edit it
         // Configure the Entry object
         entry.setValue(self.textView.text, forKey: "bodyText")
