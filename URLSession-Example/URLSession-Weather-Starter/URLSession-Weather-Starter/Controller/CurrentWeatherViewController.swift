@@ -18,7 +18,7 @@ class CurrentWeatherViewController: UIViewController {
     
     // Testing Data; API Key and Coordinates for Chicago, IL.
     let forecastAPIKey = "33c371344898311931ea3058dcc4730f"
-    let coordinate: (lat: Double, long: Double) = (41.8781, 87.6298)
+    let coordinate: (lat: Double, long: Double) = (41.8781, -87.6298)
     
     override func viewDidLoad() {
         super.viewDidLoad()
