@@ -89,7 +89,7 @@ class ItemsTableViewController: UITableViewController {
             // Sign the user out
             try Auth.auth().signOut()
             
-            // Go back to the login screen
+            // Go back to the login screen after signing out
             performSegue(withIdentifier: "SignOut", sender: nil)
             
             // Catch the error

@@ -11,6 +11,7 @@ import FirebaseAuth
 
 class SignUpViewController: UIViewController {
     
+    // Declare UI
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -60,6 +61,8 @@ class SignUpViewController: UIViewController {
     }
     
     @IBAction func didTapBackToLogin(_ sender: UIButton) {
+        
+        // Go back to the previous VC
         self.dismiss(animated: true, completion: {})
     }
     
@@ -77,7 +80,7 @@ class SignUpViewController: UIViewController {
     
     func signIn() {
         
-        // Go to the VC after successfully logging in
+        // Go to the Items VC after successfully signing up
         performSegue(withIdentifier: "SignInFromSignUp", sender: nil)
     }
 }
